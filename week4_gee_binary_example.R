@@ -10,8 +10,8 @@ obesity$id <- as.factor(obesity$id)
 summary1 <- obesity[,j=list(prop_obese = mean(status,na.rm=TRUE)*100), by = c("gender","cohort","occasion")]
 dcast(summary1, gender + cohort ~ occasion, value = "prop_obese")
 
-# GEE Model 1: 
-# - withcohort effects
+ # GEE Model 1: 
+# - with cohort effects
 # - quadratic trend with age 
 # - interaction with gender 
 
